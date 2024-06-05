@@ -5,6 +5,10 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
+const route = 'OmniscientiaHub'
+const home = `${route}/`
+const about = `${route}/about`
+
 export const theme = createTheme({
   palette: {
     mode: 'dark',
@@ -27,9 +31,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Routes>
-            <Route path="./" element={<Home />} />
-            <Route path="./about" element={<About />} />
-            <Route path="*" element={<Navigate to="/" />} />
+            <Route path={home} element={<Home />} />
+            <Route path={about} element={<About />} />
+            <Route path={route+"/*"} element={<Navigate to={home} />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
