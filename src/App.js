@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { HashRouter, Route, Routes, Navigate } from 'react-router-dom';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -25,12 +25,12 @@ function App() {
     <div>
       <div class="main">
       <ThemeProvider theme={theme}>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route path="/"element={<Home />} />
             <Route path="/about" element={<About />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </ThemeProvider>
       </div>
     </div>
