@@ -33,7 +33,6 @@ function App() {
           <Routes>
             <Route path={home} element={<Home />} />
             <Route path={about} element={<About />} />
-            <Route path={route+"/*"} element={<Navigate to={home} />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
